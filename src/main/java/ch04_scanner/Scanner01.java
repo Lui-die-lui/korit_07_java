@@ -70,12 +70,71 @@ public class Scanner01 {
 //        String name = scanner.nextLine();
 //        System.out.println(name + " 학생의 점수는" + score + " 입니다.");
 
-        System.out.println("베리어 쓰지 않는 방법");
-        System.out.print("점수를 입력하세요. >>> ");
-        double score = scanner.nextDouble();
-        System.out.print("이름을 입력하세요. >>> ");
-        String name = scanner.next();
-        System.out.println(name + " 학생의 점수는" + score + " 입니다.");
+//        System.out.println("베리어 쓰지 않는 방법");
+//        System.out.print("점수를 입력하세요. >>> ");
+//        double score = scanner.nextDouble();
+//        System.out.print("이름을 입력하세요. >>> ");
+//        String name = scanner.next();
+//        System.out.println(name + " 학생의 점수는" + score + " 입니다.");
 
+
+        for (int i = 0; i < 5; i++) { // 세로별
+            for (int j = 0; j < 5; j++) { // 가로별
+                System.out.print("*");
+            }
+            System.out.println(); // 줄바꿈
+        }
+
+
+        System.out.println();
+
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < i + 1 ; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        for (int i = 0; i < 5 ; i++) {
+            for (int j = 0; j < 4 - i ; j++) { //" "를 4번 출력 먼저 하고 값이 진행될때마다 커지는 i의 값만큼 빼면 서서히 줄어듦
+                System.out.print(" ");
+            }
+            for (int k = 0; k <= i ; k++) { // i가 반복될때마다 같이 커지기 때문 - 어차피 i 조건이 거짓이 되었을때 같이 종료됨
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        int height = 5;
+
+        // 트리 (삼각형 부분)
+        for (int i = 0; i < height; i++) {
+            // 공백 출력
+            for (int j = 0; j < height - i - 1; j++) {
+                System.out.print(" ");
+            }
+            // 별 출력
+            for (int k = 0; k < 2 * i + 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println(); // 줄 바꿈
+        }
+
+        // 트렁크 (줄기)
+        for (int i = 0; i < height - 1; i++) {
+            System.out.print(" ");
+        }
+        System.out.println("|"); // 줄기
+
+        System.out.println();
+
+        for (int i = 0 ; i < 5 ; i++) { // 5번 돎 - i가 5 미만이 될때까지 - 0 부터 시작 
+            for (int j = 0 ; j < 5 - i ; j++) { // j(0)가 5 - i(0부터 시작 - 늘어나는 숫자만 큼 -)이 true일때 동안만
+                // 계속 - 되면서 j 0 1 2 3 4 < 5 4 3 2 1
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
