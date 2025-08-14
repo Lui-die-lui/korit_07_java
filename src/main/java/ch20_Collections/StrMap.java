@@ -91,7 +91,7 @@ public class StrMap {
         // Map -> List로 바로 가는게 가능한지 여부를 따질 필요가 있음 -> 불가능
 
         // .sort() 도 가능하고 추출도 가능
-
+        System.out.println("---------------- keySet 출력 ---------------");
         // Key Set 출력
         Set<String> keySet = strMap1.keySet();
         System.out.println(keySet);
