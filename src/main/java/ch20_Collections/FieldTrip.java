@@ -5,6 +5,8 @@ import java.util.*;
 public class FieldTrip {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
+
     /*
       1. 학생의 수를 입력 받아 해당 횟수만큼 반복문을 돌릴 것.
             2. 1번 ~ 5번 학생의 응답을 fieldTrips List에 저장할 것
@@ -34,16 +36,16 @@ public class FieldTrip {
         scanner.nextLine();
         List<String> fieldTripsList = new ArrayList<>();
         Set<String> fieldTripSet = new HashSet<>();
-        String trip;
+
         for (int i = 0; i < num ; i++) {
             System.out.print(( i + 1 ) + " 번 학생의 수학 여행지를 입력하세요. >>> ");
-            trip = scanner.nextLine();
+            String trip = scanner.nextLine(); // 어차피 List에 다 들어가있음
             fieldTripsList.add(trip);
         }
 //        System.out.println(fieldTripsList);
 
 
-        for (int i = 0; i < fieldTripsList.size() ; i++) {
+        for (int i = 0; i < fieldTripsList.size() ; i++) { // num 써도 됨
             System.out.println(( i + 1 ) + " 번 학생의 후보지 : " + fieldTripsList.get(i));
         }
 
@@ -64,5 +66,6 @@ public class FieldTrip {
         System.out.println("입니다.");
 
         }
-    }
 
+
+    }
