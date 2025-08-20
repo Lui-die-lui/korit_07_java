@@ -24,6 +24,7 @@ public class MapList {
         for (Map<String, Object> customer : customers) {
             for (Map.Entry<String, Object> entry : customer.entrySet()) {
                 System.out.println(entry.getKey()+ "=" + entry.getValue());
+
             }
         }
     }
